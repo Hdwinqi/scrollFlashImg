@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>afasfaf</title>
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="scripts/flashImg-plugin.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <!--[if lt IE 7]>
+        <link href="css/font-awesome-ie7.min.css" rel="stylesheet"/>
+    <![endif]-->
+    <script>
+        $(document).ready(function(){
+            //首页焦点图片切换；
+            $("#fadImgs").scrollImg({
+                speed : "normal",  //滚动速度；
+                timer : 2000,
+                autoPlay : true,
+                isItemNum : true,
+                isArrow : true,
+                isArrowAuto: false,
+                direction : "left"
+            });
+            //注册按钮；
+        });
+    </script>
+    <style>
+         ul{margin:0;padding:0;list-style:none;}
+         .flash_img {
+            width: 480px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .sectionMainDemo {
+
+
+        }
+         .flash_img ul.img-box{
+             position:absolute;
+         }
+         .flash_img ul.img-box li img{
+             width: 480px;
+         }
+         .flash_item {
+             position: absolute;
+             right: 10px;
+             bottom: 10px;
+             height: 18px;
+             padding-top: 2px;
+         }
+         .flash_item li.on {
+             background-color: #1fa7da;
+             border-color: #82c2da;
+             color: #fff;
+             font-weight: bold;
+             height: 18px;
+             line-height: 18px;
+             margin-top: -2px;
+             width: 18px;
+         }
+         .flash_item li {
+             background-color: #e5f5f5;
+             border: 1px solid #dedede;
+             color: #888;
+             cursor: pointer;
+             float: left;
+             font-size: 12px;
+             height: 16px;
+             line-height: 16px;
+             margin-left: 3px;
+             text-align: center;
+             width: 16px;
+         }
+         .arrow-icon{
+             position:absolute;
+             width: 480px;
+             top:50%;
+             z-index:100;
+         }
+         .arrow-icon i{
+            margin:0 10px;
+             color:#ffffff;
+             cursor:pointer;
+         }
+    </style>
+
+</head>
+<body>
+<div style="width:500px;margin:100px auto;">
+<div class="sectionMainDemo  flash_img" id="fadImgs">
+    <ul class="img-box js_img-box">
+        <li><a href="#"><img id="simg1" src="images/image-1.jpg"></a></li>
+        <li><a href="#"><img id="simg2" src="images/image-2.jpg"></a></li>
+        <li><a href="#"><img id="simg3" src="images/image-3.jpg"></a></li>
+        <li><a href="#"><img id="simg4" src="images/image-4.jpg"></a></li>
+    </ul>
+    <div id="direction-arrow" class="arrow-icon clearfix">
+        <i class="icon-chevron-left pull-left js_icon-btn" style="display:none;"></i>
+        <i class="icon-chevron-right pull-right js_icon-btn" style="display:none;"></i>
+    </div>
+
+ </div>
+
+
+</div>
+
+</body>
+</html>
